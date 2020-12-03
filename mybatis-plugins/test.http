@@ -1,0 +1,28 @@
+### 测试的请求url
+
+### 分页获取
+GET http://localhost/test/page
+
+### 修改
+PUT http://localhost:8080/test/update
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name":"One",
+  "type": 1
+}
+
+### 插入
+POST http://localhost:8080/test/install
+Content-Type: application/json
+
+{
+  "name":"Four",
+  "type": 1
+}
+### 获取单个
+GET http://localhost:8080/test/echo/5
+
+### 删除
+POST http://localhost:8080/test/echo/5

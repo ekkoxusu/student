@@ -1,0 +1,38 @@
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: del
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-enums-package: com.su.student.mybatisplugins.enums
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  datasource:
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat
+    initial-size: 5
+    max-active: 5
+    max-wait: 60000
+    min-evictable-idle-time-millis: 300000
+    min-idle: 5
+    password: 123456
+    test-on-borrow: false
+    test-on-return: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 60000
+    url: jdbc:mysql://47.104.228.234:3308/test?serverTimezone=GMT%2B8&useSSL=false&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true
+    username: root
+    validation-query: SELECT 1
+knife4j:
+  enable: true
+  setting:
+    enableFooter: false
+    enableFooterCustom: true
+    footerCustomContent: Apache License 2.0 | Copyright  2020-[溯](https://gitee.com/xiaoym/knife4j)
+    enableOpenApi: false
+  basic:
+    enable: true
+    username: test
+    password: 1233
