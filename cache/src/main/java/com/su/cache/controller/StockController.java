@@ -25,12 +25,12 @@ public class StockController {
      * 获取商品库存
      * 1. 将请求让入异步service
      * 2. 获取数据
-     * @param product
+     * @param productId
      * @return
      */
     @GetMapping("get")
-    public Response<Stock> get(Long product){
-        return Response.sussce(stockService.getStock(product));
+    public Response<Stock> get(Long productId){
+        return Response.sussce(stockService.getStock(productId));
     }
     /**
      *  设置商品缓存
