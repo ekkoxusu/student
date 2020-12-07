@@ -2,7 +2,9 @@ package com.su.cache.request;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author xusu
@@ -13,6 +15,7 @@ public class StockRequestQueue {
 
     public List<ArrayBlockingQueue<Request>> queues = new ArrayList<>();
 
+    public Map<Long,Boolean> flagMap = new ConcurrentHashMap<>();
 
     public Boolean addQueue(ArrayBlockingQueue<Request> stockRequests){
         return queues.add(stockRequests);
@@ -40,5 +43,9 @@ public class StockRequestQueue {
 
     public ArrayBlockingQueue<Request> getQueues(int i) {
         return queues.get(i);
+    }
+
+    public Map<Long, Boolean> getFlagMap() {
+        return flagMap;
     }
 }

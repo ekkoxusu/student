@@ -2,6 +2,8 @@ package com.su.cache.thread;
 
 import com.su.cache.request.Request;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
 
