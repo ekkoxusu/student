@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
+import javax.annotation.Resource;
 import java.util.EventListener;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -28,6 +29,9 @@ public class BeanFactory {
     /** 线程池核心池的大小*/
     public final static int CORE_POOL_SIZE = 10;
 
+
+    @Resource
+    public InitListener initListener;
     /**
      * 消费队列线程
      * @return
@@ -43,7 +47,7 @@ public class BeanFactory {
     @Bean
     public ServletListenerRegistrationBean<?> servletListenerRegistrationBean(){
         ServletListenerRegistrationBean<EventListener> srb = new ServletListenerRegistrationBean<>();
-        srb.setListener(new InitListener());
+        srb.setListener(initListener);
         return srb;
     }
 

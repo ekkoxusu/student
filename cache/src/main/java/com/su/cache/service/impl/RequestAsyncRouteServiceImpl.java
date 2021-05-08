@@ -4,6 +4,7 @@ import com.su.cache.request.Request;
 import com.su.cache.request.StockRequestQueue;
 import com.su.cache.service.IRequestAsyncRouteService;
 import lombok.extern.java.Log;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
@@ -12,6 +13,7 @@ import java.util.concurrent.ArrayBlockingQueue;
  * @since 2020/12/5
  */
 @Log
+@Service
 public class RequestAsyncRouteServiceImpl implements IRequestAsyncRouteService {
     @Override
     public void process(Request request) {

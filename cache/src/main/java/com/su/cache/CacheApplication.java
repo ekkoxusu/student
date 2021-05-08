@@ -1,9 +1,11 @@
 package com.su.cache;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackageClasses = org.springframework.boot.autoconfigure.data.redis.RedisProperties.class)
+@SpringBootApplication(scanBasePackages = "com.su.cache")
+@MapperScan("com.su.cache.mapper")
 public class CacheApplication {
 
     public static void main(String[] args) {
