@@ -24,12 +24,12 @@ spring:
     test-on-return: false
     test-while-idle: true
     time-between-eviction-runs-millis: 60000
-    url: jdbc:mysql://47.104.228.234:3308/test?serverTimezone=GMT%2B8&useSSL=false&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3308/test?serverTimezone=GMT%2B8&useSSL=false&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true
     username: root
     validation-query: SELECT 1
   # redis
   redis:
-    host: 47.104.228.234
+    host: localhost
     timeout: 6000
     port: 6379
 #swagger
